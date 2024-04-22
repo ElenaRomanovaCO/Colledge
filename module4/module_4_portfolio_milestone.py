@@ -27,6 +27,8 @@ def main():
     total_price = ((float(item1.item_price) * int(item1.item_quantity)) +
                    (float(item2.item_price) * int(item2.item_quantity)))
     print(f"{total_price=}")
+    print(f"{item1.item_name=}, {item1.item_price=}, {item1.item_quantity=}")
+    print(f"{item2.item_name=}, {item2.item_price=}, {item2.item_quantity=}")
 
 
 # Calling Main function
