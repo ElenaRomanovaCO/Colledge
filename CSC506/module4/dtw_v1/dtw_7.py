@@ -22,11 +22,11 @@ ticker_1_symbol = "TSLA"
 ticker_2_symbol = "AMZN"
 
 # Define custom start and end dates
-start_date_1 = "2024-06-01"  # Start date for the first ticker
-end_date_1 = "2024-08-01"    # End date for the first ticker
+start_date_1 = "2024-04-01"  # Start date for the first ticker
+end_date_1 = "2024-06-01"    # End date for the first ticker
 
-start_date_2 = "2024-06-01"  # Start date for the second ticker
-end_date_2 = "2024-08-01"    # End date for the second ticker
+start_date_2 = "2024-04-01"  # Start date for the second ticker
+end_date_2 = "2024-06-01"    # End date for the second ticker
 
 # Fetching historical stock price data using the defined date range
 ticker_1 = yf.Ticker(ticker_1_symbol)
@@ -61,7 +61,7 @@ print(f"Series 2 length: {len(series_2)}, first few values: {series_2[:5]}")
 distance = dtw.distance(series_1, series_2)
 print(f"DTW distance between {ticker_1_symbol} and {ticker_2_symbol}: {distance}")
 
-# Calculate cost matrix and warping paths without specifying 'use_c'
+# Calculate cost matrix and warping paths
 accumulated_cost, cost_matrix = dtw.warping_paths(series_1, series_2)
 
 # Debugging: print types and values to verify output
